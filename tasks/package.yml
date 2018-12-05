@@ -1,0 +1,7 @@
+---
+- name: "Ensure package {{ package }} is installed."
+  homebrew:
+    name: "{{ package.name | default(package) }}"
+    install_options: "{{ package.install_options | default(omit) }}"
+    state: present
+  tags: [ 'brew_packages' ]

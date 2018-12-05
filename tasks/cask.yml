@@ -1,0 +1,8 @@
+---
+# Cask.
+- name: "Install cask {{ cask }}"
+  homebrew_cask:
+    name: "{{ cask }}"
+    state: present
+    install_options: "appdir={{ homebrew_cask_appdir }}"
+  tags: [ 'brew_casks' ]

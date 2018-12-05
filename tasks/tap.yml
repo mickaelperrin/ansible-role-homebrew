@@ -1,0 +1,5 @@
+---
+# Tap.
+- name: "Install tap {{ tap }}"
+  homebrew_tap: "tap={{ tap }} state=present"
+  tags: [ 'brew_packages', 'brew_casks' ]
